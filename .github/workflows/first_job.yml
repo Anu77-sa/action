@@ -10,3 +10,8 @@ jobs:
     steps:
       - name: print build
         run: echo "this is 1st build"
+  build2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print build
+        run: echo "this is 2nd build"      
