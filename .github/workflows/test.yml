@@ -1,0 +1,13 @@
+name: test-job
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print build
+        run: echo "test is successfull"
+    
