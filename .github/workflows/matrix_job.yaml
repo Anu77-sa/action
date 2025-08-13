@@ -1,0 +1,14 @@
+name: build-matrix
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-22.04, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Echo OS version
+        run: grep 'PRETTY_NAME' /etc/os-release
